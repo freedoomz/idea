@@ -8,4 +8,5 @@
 
 	$foo->login('kullanici_adi', 'sifre'); //boolean true ise session acar
 	$foo->logout(); //boolean true ise session sonlandirilmistir
+	//$foo->register('yeni_kullanici', 'sifre', 'Yeni Kullanici'); //boolean true ise ekleme basarilidir
 ?>
