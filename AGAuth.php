@@ -47,11 +47,14 @@ class AGAuth {
 
 	public function register($username, $password, $fullName) {
 		$stmt = $this->db->prepare("INSERT INTO users (username, password, full_name) VALUES (:username, :password, :full_name)");
-		if($stmt->execute([
+
+		$params = [
 			'username' => $username,
 			'password' => md5($password),
 			'full_name' => $fullName,
-		])) {
+		];
+
+		if($stmt->execute($params)) {
 			return true;
 		} else {
 			return false;
