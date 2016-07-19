@@ -1,0 +1,5 @@
+<FilesMatch "\.(ini|conf|sql)$">
+	order allow,deny
+	deny from all
+</FilesMatch>
+RewriteEngine on
